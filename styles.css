@@ -1,128 +1,142 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'poppins',sans-serif;
+/* Reset default browser styles and set base styles for all elements */
+* {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    font-family: 'Poppins', sans-serif; /* Set default font for all elements */
 }
 
-.container{
-    width:100vw;
-    height:100vh;
-    background-image: url(images/yuriy-kovalev-nN1HSDtKdlw-unsplash.jpg);
-    background-position: center;
-    background-size: cover;
-    padding: 0 8%;
+/* Main container for the landing section */
+.container {
+    width: 100vw; /* Full width of the viewport */
+    height: 100vh; /* Full height of the viewport */
+    background-image: url(images/yuriy-kovalev-nN1HSDtKdlw-unsplash.jpg); /* Background image */
+    background-position: center; /* Center the image */
+    background-size: cover; /* Cover the entire container */
+    padding: 0 8%; /* Left and right padding */
 }
 
-.logo{
-    width: 120px;
-    padding: 20px 0;
-    cursor: pointer;
-}
-.content{
-    top:30%;
-    position: relative;
-    transform: translateY(-50%);
-    color: #fff;
+/* Logo styling */
+.logo {
+    width: 120px; /* Logo width */
+    padding: 20px 0; /* Top and bottom padding */
+    cursor: pointer; /* Cursor changes to pointer on hover */
 }
 
+/* Content block within the container */
+.content {
+    top: 30%; /* Position from the top */
+    position: relative; /* Positioned relative to its normal position */
+    transform: translateY(-50%); /* Vertically center it */
+    color: #fff; /* Text color white */
+}
+
+/* Main heading inside content */
 .content h1 {
-    font-size: 64px;
-    font-weight: 500;
-
+    font-size: 64px; /* Large text */
+    font-weight: 500; /* Medium font weight */
 }
 
+/* Highlighted word within the heading */
 .content h1 span {
-    color:#ff375f;
+    color: #ff375f; /* Pink highlight color */
 }
 
+/* Button styling */
 .content button {
-    background: transparent;
-    border:2px solid #fff;
-    outline:none;
-    padding:12px 25px;
-    color:#fff;
-    margin-top: 30px;
-    cursor: pointer;
+    background: transparent; /* No background */
+    border: 2px solid #fff; /* White border */
+    outline: none; /* Remove default focus outline */
+    padding: 12px 25px; /* Spacing inside button */
+    color: #fff; /* Text color */
+    margin-top: 30px; /* Space above button */
+    cursor: pointer; /* Pointer on hover */
 }
 
-.launch-time{
-    display: flex;
+/* Countdown timer layout */
+.launch-time {
+    display: flex; /* Horizontal layout */
 }
 
-.launch-time div{
-    flex-basis: 100px;
+/* Each countdown block */
+.launch-time div {
+    flex-basis: 100px; /* Fixed width for each */
 }
 
-.launch-time div p{
-    font-size: 60px;
-    margin-bottom: -14px;
-
+/* Number inside countdown */
+.launch-time div p {
+    font-size: 60px; /* Large number */
+    margin-bottom: -14px; /* Pull text upward */
 }
 
+/* Rocket image styling */
 .rocket {
-    width:250px;
-    position: absolute;
-    right:10%;
-    bottom: 0;
-    animation: rocket 4s linear infinite;
+    width: 250px; /* Rocket size */
+    position: absolute; /* Absolute positioning */
+    right: 10%; /* Position from right */
+    bottom: 0; /* Start from bottom */
+    animation: rocket 4s linear infinite; /* Infinite rocket animation */
 }
-@keyframes rocket{
-    0%{
-        bottom:0;
-        opacity:0;
+
+/* Rocket animation keyframes */
+@keyframes rocket {
+    0% {
+        bottom: 0; /* Start at bottom */
+        opacity: 0; /* Invisible at start */
     }
-    100%{
-         bottom:105%;
-        opacity:1;
+    100% {
+        bottom: 105%; /* Move out of view */
+        opacity: 1; /* Fully visible */
     }
 }
 
+/* Responsive styles for tablets and below */
 @media (max-width: 768px) {
   .content h1 {
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* Smaller heading for tablets */
     margin-bottom: 1rem;
   }
 
   .rocket {
-    width: 150px;
-    right: 2%;
+    width: 150px; /* Smaller rocket */
+    right: 2%; /* Adjust right space */
   }
 
   .launch-time div p {
-    font-size: 2.3rem;
-    margin-bottom: 1rem
+    font-size: 2.3rem; /* Adjust countdown text */
+    margin-bottom: 1rem;
   }
 
   .content button {
-    padding: 10px 20px;
+    padding: 10px 20px; /* Adjust button padding */
   }
 }
 
+/* Responsive styles for phones */
 @media (max-width: 480px) {
   .content {
-    top: 40%;
+    top: 40%; /* Adjust content position */
   }
 
   .content h1 {
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* Smaller font size */
     margin-bottom: 1rem;
   }
 
   .launch-time {
-    justify-content: center;
+    justify-content: center; /* Center countdown */
   }
 
   .launch-time div {
-    flex-basis: 80px;
+    flex-basis: 80px; /* Narrower countdown block */
   }
 
   .launch-time div p {
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* Smaller countdown text */
     margin-bottom: 1rem;
   }
 
   .rocket {
-    width: 120px;
+    width: 120px; /* Smaller rocket for phones */
   }
 }
