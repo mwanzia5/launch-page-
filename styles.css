@@ -6,8 +6,8 @@
 }
 
 .container{
-    width:200vh;
-    height:97.5vh;
+    width:100vw;
+    height:100vh;
     background-image: url(images/yuriy-kovalev-nN1HSDtKdlw-unsplash.jpg);
     background-position: center;
     background-size: cover;
@@ -76,4 +76,53 @@
          bottom:105%;
         opacity:1;
     }
+}
+
+@media (max-width: 768px) {
+  .content h1 {
+    font-size: 2.0rem;
+    margin-bottom: 1rem;
+  }
+
+  .rocket {
+    width: 150px;
+    right: 2%;
+  }
+
+  .launch-time div p {
+    font-size: 2.3rem;
+    margin-bottom: 1rem
+  }
+
+  .content button {
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    top: 40%;
+  }
+
+  .content h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .launch-time {
+    justify-content: center;
+  }
+
+  .launch-time div {
+    flex-basis: 80px;
+  }
+
+  .launch-time div p {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .rocket {
+    width: 120px;
+  }
 }
